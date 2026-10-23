@@ -15,18 +15,18 @@
     <p>YouTube Toolbox（以下「この拡張」）は、YouTube の表示を整理する Chrome 拡張機能です。このページでは、この拡張が扱う情報と、その保存先を説明します。</p>
 
     <h2>開発者が受け取る情報</h2>
-    <p>ありません。この拡張は開発者のサーバーを持たず、利用者の設定・一覧・閲覧履歴・視聴履歴・アカウント情報を、開発者や第三者へ送信しません。データの販売もしません。</p>
+    <p>ありません。この拡張は開発者のサーバーを持たず、利用者の設定・一覧・閲覧履歴・視聴履歴・アカウント情報を、開発者へは何も送信しません。データの販売もしません。Google（Chrome の同期、Google ドライブ）や YouTube との通信は、下の各項目のとおりです。</p>
 
     <h2>保存する情報と保存先</h2>
     <ul>
       <li><strong>表示・動作の設定</strong>（各機能のオン・オフや数値）: Chrome の <code>chrome.storage.sync</code> に保存します。Chrome の同期がオンの場合、Google によって利用者自身の他のPCの Chrome に同期されます。</li>
-      <li><strong>非表示にした登録チャンネルとブロック一覧</strong>（チャンネルの識別子・表示名、動画ID・タイトル、ブロックする語）と、その更新時刻・削除記録: 利用者のPCの <code>chrome.storage.local</code> に保存します。</li>
+      <li><strong>非表示にした登録チャンネルとブロック一覧</strong>（チャンネルの識別子・表示名、動画ID・タイトル、ブロックする語）と、その更新時刻・削除記録: 利用者のPCの <code>chrome.storage.local</code> に保存します。あわせて Chrome の <code>chrome.storage.sync</code> にも保存し、Chrome の同期がオンの場合は利用者自身の他のPCと共有します（量が Chrome の同期の上限を超えた場合は、Chrome の同期での共有を止めます）。</li>
       <li><strong>チャンネルアイコンの画像URL</strong>: 一覧の表示用に、利用者のPCに一時的に保存します。</li>
     </ul>
     <p>この拡張は Cookie やパスワードなどの認証情報を読み取ったり保存したりしません。</p>
 
     <h2>Google ドライブとの同期（任意）</h2>
-    <p>利用者が設定画面で「Google アカウントで接続」を押した場合に限り、非表示にした登録チャンネルとブロック一覧（更新時刻・削除記録を含む）を、<strong>利用者自身の Google ドライブの appDataFolder</strong>（この拡張だけが読み書きできる隠し領域）に保存し、利用者の他のPCと同期します。</p>
+    <p>一覧の量が多い場合などに、利用者が設定画面で「Google アカウントで接続」を押した場合に限り、非表示にした登録チャンネルとブロック一覧（更新時刻・削除記録を含む）を、<strong>利用者自身の Google ドライブの appDataFolder</strong>（この拡張だけが読み書きできる隠し領域）に保存し、利用者の他のPCと同期します。</p>
     <ul>
       <li>使う権限は <code>https://www.googleapis.com/auth/drive.appdata</code> だけです。利用者がドライブに置いている通常のファイルは読みも書きもしません。</li>
       <li>保存先は利用者のドライブで、開発者は内容を見ることができません。</li>
@@ -64,18 +64,18 @@
       <p>YouTube Toolbox ("the extension") is a Chrome extension that tidies up the YouTube interface. This page explains what information the extension handles and where it is stored.</p>
 
       <h2>Information the developer receives</h2>
-      <p>None. The extension has no developer server. It does not send your settings, lists, browsing history, watch history, or account information to the developer or to any third party, and it does not sell any data.</p>
+      <p>None. The extension has no developer server. It sends nothing to the developer — not your settings, lists, browsing history, watch history, or account information — and it does not sell any data. Connections to Google (Chrome sync, Google Drive) and YouTube are described in the sections below.</p>
 
       <h2>What is stored, and where</h2>
       <ul>
         <li><strong>Display and behavior settings</strong> (feature toggles and values) are stored in Chrome's <code>chrome.storage.sync</code>. If Chrome sync is on, Google syncs them to Chrome on your other computers.</li>
-        <li><strong>Hidden subscription channels and block lists</strong> (channel identifiers and names, video IDs and titles, blocked words), together with their update times and deletion records, are stored on your computer in <code>chrome.storage.local</code>.</li>
+        <li><strong>Hidden subscription channels and block lists</strong> (channel identifiers and names, video IDs and titles, blocked words), together with their update times and deletion records, are stored on your computer in <code>chrome.storage.local</code>. They are also saved to Chrome's <code>chrome.storage.sync</code>, so if Chrome sync is on they are shared with your other computers (if the lists grow beyond Chrome sync's limit, sharing through Chrome sync stops).</li>
         <li><strong>Channel icon image URLs</strong> are cached on your computer to display the lists.</li>
       </ul>
       <p>The extension does not read or store cookies, passwords, or other credentials.</p>
 
       <h2>Google Drive sync (optional)</h2>
-      <p>Only when you click "Connect with a Google account" in the settings, the extension saves your hidden subscription channels and block lists (including update times and deletion records) to the <strong>appDataFolder of your own Google Drive</strong> — a hidden folder that only this extension can access — to sync them across your computers.</p>
+      <p>For larger lists or if you prefer, and only when you click "Connect with a Google account" in the settings, the extension saves your hidden subscription channels and block lists (including update times and deletion records) to the <strong>appDataFolder of your own Google Drive</strong> — a hidden folder that only this extension can access — to sync them across your computers.</p>
       <ul>
         <li>The only scope used is <code>https://www.googleapis.com/auth/drive.appdata</code>. The extension does not read or write your regular Drive files.</li>
         <li>The data is stored in your Drive. The developer cannot see it.</li>
