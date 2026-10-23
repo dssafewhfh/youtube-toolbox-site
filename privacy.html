@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Toolbox – プライバシーポリシー / Privacy Policy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <p class="back"><a href="./">YouTube Toolbox</a></p>
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">最終更新日: 2026年10月23日</p>
+
+    <p>YouTube Toolbox（以下「この拡張」）は、YouTube の表示を整理する Chrome 拡張機能です。このページでは、この拡張が扱う情報と、その保存先を説明します。</p>
+
+    <h2>開発者が受け取る情報</h2>
+    <p>ありません。この拡張は開発者のサーバーを持たず、利用者の設定・一覧・閲覧履歴・視聴履歴・アカウント情報を、開発者や第三者へ送信しません。データの販売もしません。</p>
+
+    <h2>保存する情報と保存先</h2>
+    <ul>
+      <li><strong>表示・動作の設定</strong>（各機能のオン・オフや数値）: Chrome の <code>chrome.storage.sync</code> に保存します。Chrome の同期がオンの場合、Google によって利用者自身の他のPCの Chrome に同期されます。</li>
+      <li><strong>非表示にした登録チャンネルとブロック一覧</strong>（チャンネルの識別子・表示名、動画ID・タイトル、ブロックする語）と、その更新時刻・削除記録: 利用者のPCの <code>chrome.storage.local</code> に保存します。</li>
+      <li><strong>チャンネルアイコンの画像URL</strong>: 一覧の表示用に、利用者のPCに一時的に保存します。</li>
+    </ul>
+    <p>この拡張は Cookie やパスワードなどの認証情報を読み取ったり保存したりしません。</p>
+
+    <h2>Google ドライブとの同期（任意）</h2>
+    <p>利用者が設定画面で「Google アカウントで接続」を押した場合に限り、非表示にした登録チャンネルとブロック一覧（更新時刻・削除記録を含む）を、<strong>利用者自身の Google ドライブの appDataFolder</strong>（この拡張だけが読み書きできる隠し領域）に保存し、利用者の他のPCと同期します。</p>
+    <ul>
+      <li>使う権限は <code>https://www.googleapis.com/auth/drive.appdata</code> だけです。利用者がドライブに置いている通常のファイルは読みも書きもしません。</li>
+      <li>保存先は利用者のドライブで、開発者は内容を見ることができません。</li>
+      <li>Google へのログインは Chrome（<code>chrome.identity</code>）が管理します。この拡張はログイン用のトークンを設定やファイルに保存しません。</li>
+      <li>設定画面の「接続を解除」で同期を止められます。保存した一覧を消すには、Google ドライブの「設定」→「アプリの管理」で YouTube Toolbox の「隠しアプリデータを削除」を選んでください。</li>
+    </ul>
+    <p>この拡張による Google API から受け取った情報の利用と他のアプリへの転送は、Limited Use の要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> に従います。</p>
+
+    <h2>外部との通信</h2>
+    <ul>
+      <li><strong>YouTube（www.youtube.com）</strong>: 表示の調整のために YouTube のページで動作します。非表示にするチャンネルを追加するときは、そのチャンネルの公開ページを Cookie を付けずに取得し、チャンネル名と識別子を確認します。「登録済みチャンネルから選ぶ」を押したときは、利用者がログインしている YouTube の登録チャンネル一覧を読み取ります（登録や登録解除はしません）。未加入で視聴できないメンバー限定のおすすめを隠す機能では、候補の動画の視聴ページを取得して視聴できるかだけを確認します。このとき Chrome が YouTube のログイン状態を自動で使いますが、この拡張が Cookie の値を読み取ることはありません。</li>
+      <li><strong>YouTube の画像配信元（yt3.ggpht.com、yt3.googleusercontent.com）</strong>: 一覧にチャンネルアイコンを表示するために画像を読み込みます。</li>
+      <li><strong>Google（www.googleapis.com、oauth2.googleapis.com）</strong>: Google ドライブとの同期を有効にした場合だけ通信します。</li>
+      <li><strong>右クリックの YouTube 検索</strong>: 利用者が選んだ文字を YouTube の検索に渡します。</li>
+    </ul>
+
+    <h2>設定の書き出し・読み込み</h2>
+    <p>「書き出す」は、設定と一覧を利用者のPCに JSON ファイルとして保存します。「読み込む」は、利用者が選んだファイルを拡張の中だけで処理します。どちらも外部へは送信しません。</p>
+
+    <h2>データの削除</h2>
+    <p>拡張を削除すると、PCに保存された設定と一覧は Chrome によって削除されます。Google ドライブに同期した一覧の削除方法は、上の「Google ドライブとの同期」を見てください。</p>
+
+    <h2>このポリシーの変更</h2>
+    <p>扱う情報が変わる場合は、このページを更新し、最終更新日を改めます。</p>
+
+    <h2>問い合わせ</h2>
+    <p><a href="https://github.com/dssafewhfh/youtube-toolbox-site/issues">GitHub の Issues</a> からご連絡ください。</p>
+
+    <hr>
+
+    <h1 lang="en">Privacy Policy</h1>
+    <div lang="en">
+      <p class="updated">Last updated: October 23, 2026</p>
+
+      <p>YouTube Toolbox ("the extension") is a Chrome extension that tidies up the YouTube interface. This page explains what information the extension handles and where it is stored.</p>
+
+      <h2>Information the developer receives</h2>
+      <p>None. The extension has no developer server. It does not send your settings, lists, browsing history, watch history, or account information to the developer or to any third party, and it does not sell any data.</p>
+
+      <h2>What is stored, and where</h2>
+      <ul>
+        <li><strong>Display and behavior settings</strong> (feature toggles and values) are stored in Chrome's <code>chrome.storage.sync</code>. If Chrome sync is on, Google syncs them to Chrome on your other computers.</li>
+        <li><strong>Hidden subscription channels and block lists</strong> (channel identifiers and names, video IDs and titles, blocked words), together with their update times and deletion records, are stored on your computer in <code>chrome.storage.local</code>.</li>
+        <li><strong>Channel icon image URLs</strong> are cached on your computer to display the lists.</li>
+      </ul>
+      <p>The extension does not read or store cookies, passwords, or other credentials.</p>
+
+      <h2>Google Drive sync (optional)</h2>
+      <p>Only when you click "Connect with a Google account" in the settings, the extension saves your hidden subscription channels and block lists (including update times and deletion records) to the <strong>appDataFolder of your own Google Drive</strong> — a hidden folder that only this extension can access — to sync them across your computers.</p>
+      <ul>
+        <li>The only scope used is <code>https://www.googleapis.com/auth/drive.appdata</code>. The extension does not read or write your regular Drive files.</li>
+        <li>The data is stored in your Drive. The developer cannot see it.</li>
+        <li>Google sign-in is managed by Chrome (<code>chrome.identity</code>). The extension does not save sign-in tokens to its settings or to files.</li>
+        <li>You can stop syncing with "Disconnect" in the settings. To delete the synced lists, open Google Drive Settings → Manage apps, and choose "Delete hidden app data" for YouTube Toolbox.</li>
+      </ul>
+      <p>The extension's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+      <h2>Network connections</h2>
+      <ul>
+        <li><strong>YouTube (www.youtube.com)</strong>: The extension runs on YouTube pages to adjust what is shown. When you add a channel to hide, it fetches that channel's public page without cookies to confirm its name and identifiers. When you click "Choose from my subscriptions", it reads the subscription list of the YouTube account you are signed in to (it never subscribes or unsubscribes). The option that hides members-only recommendations you cannot watch fetches the candidate video's watch page only to check whether it can be played; Chrome uses your YouTube sign-in automatically, but the extension never reads cookie values.</li>
+        <li><strong>YouTube image servers (yt3.ggpht.com, yt3.googleusercontent.com)</strong>: Channel icons are loaded for the lists.</li>
+        <li><strong>Google (www.googleapis.com, oauth2.googleapis.com)</strong>: Contacted only when Google Drive sync is enabled.</li>
+        <li><strong>Right-click YouTube search</strong>: Sends the text you selected to YouTube search.</li>
+      </ul>
+
+      <h2>Exporting and importing settings</h2>
+      <p>"Export" saves your settings and lists to a JSON file on your computer. "Import" processes the file you choose inside the extension only. Neither sends data anywhere.</p>
+
+      <h2>Deleting your data</h2>
+      <p>Removing the extension makes Chrome delete the settings and lists stored on your computer. To delete lists synced to Google Drive, see "Google Drive sync" above.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If the information the extension handles changes, this page will be updated along with the date above.</p>
+
+      <h2>Contact</h2>
+      <p>Please contact us through <a href="https://github.com/dssafewhfh/youtube-toolbox-site/issues">GitHub Issues</a>.</p>
+    </div>
+  </main>
+</body>
+</html>
