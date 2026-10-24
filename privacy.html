@@ -31,6 +31,7 @@
       <li>使う権限は <code>https://www.googleapis.com/auth/drive.appdata</code> だけです。利用者がドライブに置いている通常のファイルは読みも書きもしません。</li>
       <li>保存先は利用者のドライブで、開発者は内容を見ることができません。</li>
       <li>Google へのログインは Chrome（<code>chrome.identity</code>）が管理します。この拡張はログイン用のトークンを設定やファイルに保存しません。</li>
+      <li>「アカウントを選んで接続」では、接続する Google アカウントを選べます（複数の Chrome プロファイルで、同じアカウントのドライブを共有するため）。選んだアカウントのメールアドレスを、表示と再接続のために利用者のPCの中に保存します。ログイン用のトークンはブラウザのメモリ上にだけ一時的に置き、ディスクには書きません。</li>
       <li>設定画面の「接続を解除」で同期を止められます。保存した一覧を消すには、Google ドライブの「設定」→「アプリの管理」で YouTube Toolbox の「隠しアプリデータを削除」を選んでください。</li>
     </ul>
     <p>この拡張による Google API から受け取った情報の利用と他のアプリへの転送は、Limited Use の要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> に従います。</p>
@@ -80,6 +81,7 @@
         <li>The only scope used is <code>https://www.googleapis.com/auth/drive.appdata</code>. The extension does not read or write your regular Drive files.</li>
         <li>The data is stored in your Drive. The developer cannot see it.</li>
         <li>Google sign-in is managed by Chrome (<code>chrome.identity</code>). The extension does not save sign-in tokens to its settings or to files.</li>
+        <li>"Choose an account to connect" lets you pick the Google account to use, so several Chrome profiles can share the same account's Drive folder. The chosen account's email address is stored on your computer to display it and to reconnect. The sign-in token is kept only temporarily in the browser's memory and is never written to disk.</li>
         <li>You can stop syncing with "Disconnect" in the settings. To delete the synced lists, open Google Drive Settings → Manage apps, and choose "Delete hidden app data" for YouTube Toolbox.</li>
       </ul>
       <p>The extension's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
