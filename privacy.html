@@ -26,7 +26,7 @@
     <p>この拡張は Cookie やパスワードなどの認証情報を読み取ったり保存したりしません。</p>
 
     <h2>Google ドライブとの同期（任意）</h2>
-    <p>一覧の量が多い場合などに、利用者が設定画面で「Google アカウントで接続」を押した場合に限り、非表示にした登録チャンネルとブロック一覧（更新時刻・削除記録を含む）を、<strong>利用者自身の Google ドライブの appDataFolder</strong>（この拡張だけが読み書きできる隠し領域）に保存し、利用者の他のPCと同期します。</p>
+    <p>一覧の量が多い場合などに、利用者が設定画面で「Google アカウントで接続」を押した場合に限り、非表示にした登録チャンネルとブロック一覧（更新時刻・削除記録を含む）と、設定画面の「同期」タブで選んだ場合は設定（各機能のオン・オフや数値）を、<strong>利用者自身の Google ドライブの appDataFolder</strong>（この拡張だけが読み書きできる隠し領域）に保存し、利用者の他のPCと同期します。</p>
     <ul>
       <li>使う権限は <code>https://www.googleapis.com/auth/drive.appdata</code> だけです。利用者がドライブに置いている通常のファイルは読みも書きもしません。</li>
       <li>保存先は利用者のドライブで、開発者は内容を見ることができません。</li>
@@ -76,7 +76,7 @@
       <p>The extension does not read or store cookies, passwords, or other credentials.</p>
 
       <h2>Google Drive sync (optional)</h2>
-      <p>For larger lists or if you prefer, and only when you click "Connect with a Google account" in the settings, the extension saves your hidden subscription channels and block lists (including update times and deletion records) to the <strong>appDataFolder of your own Google Drive</strong> — a hidden folder that only this extension can access — to sync them across your computers.</p>
+      <p>For larger lists or if you prefer, and only when you click "Connect with a Google account" in the settings, the extension saves your hidden subscription channels and block lists (including update times and deletion records), and your settings (feature toggles and values) if you choose so in the Sync tab, to the <strong>appDataFolder of your own Google Drive</strong> — a hidden folder that only this extension can access — to sync them across your computers.</p>
       <ul>
         <li>The only scope used is <code>https://www.googleapis.com/auth/drive.appdata</code>. The extension does not read or write your regular Drive files.</li>
         <li>The data is stored in your Drive. The developer cannot see it.</li>
